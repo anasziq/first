@@ -7,11 +7,11 @@ import { splitClasses } from '@angular/compiler';
   styleUrls: ['./css-code.component.scss']
 })
 export class CssCodeComponent implements OnInit {
-
   constructor() { }
-  @Input() scss:string;
-  @Input() color1;
-  @Input() color2;
+ 
+  @Input() color1='red';
+  @Input() color2= 'blue';
+  
   ngOnInit() {
     
   }

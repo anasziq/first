@@ -15,10 +15,8 @@ export class AppComponent {
   h: boolean =true;
   inputT:string;
   element: HTMLElement;
-  read:string= 'linear-gradient(' + 'to bottom' +',' + this.fcolor + ',' + this.fcolor2 + ')';
-  print(){
-  this.read = 'linear-gradient(' + 'to bottom' +',' + this.fcolor + ',' + this.fcolor2 + ')';
-  }
+  
+ 
   send(){
    this.element=document.getElementById('im1') as HTMLElement;
     this.uu = "assets/img/flag.png";
