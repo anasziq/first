@@ -12,10 +12,15 @@
 
       <div class="g3t">
         <div></div>
-        <div class="rec">
 
-
-
+        <div class="rec" id="back"
+          [style.background-image]="'linear-gradient(' + 'to bottom' +',' + this.fcolor + ',' + this.fcolor2 + ')'">
+          <div style="display: flex; align-items: center; padding: 15px ">
+            <app-pic-app [url]='uu' [ff]='h'></app-pic-app>
+            <app-title-app [tit]='name'></app-title-app>
+          </div>
+          <app-text-app [text]='body'></app-text-app>
+          
         </div>
         <div></div>
       </div>
@@ -26,20 +31,74 @@
           <button class="btn" onclick="document.getElementById('file').click();">
             <span> <img src="assets/img/play-button.svg" width="50px" height="50px"> </span>
           </button>
-          <input type="color" style="display:none;" id="file"  onclick="watchColorPicker()"/>
+          <input type="button" style="display:none;" id="file" [(colorPicker)]="fcolor" />
         </div>
+
         <div></div>
+
         <div style="display: flex;">
           <button class="btn" onclick="document.getElementById('file2').click();">
-            <span> <img src="assets/img/play-button.svg" width="50px" height="50px" (change)="print()"> </span>
+            <span> <img src="assets/img/play-button.svg" width="50px" height="50px"> </span>
           </button>
-          <input type="color" style="display:none;" id="file2" />
+          <input type="button" style="display:none;" id="file2" [(colorPicker)]="fcolor2 " />
         </div>
         <div></div>
 
       </div>
     </div>
-    <div id="rrr" style="background: blue"> </div>
+    <div id="rrr" class="grid2">
+      <div class="grid4rows">
+        <div class="dimmi"><button class="btn0" 
+          onclick="document.getElementById('d1').setAttribute('style','display: flex');
+                  document.getElementById('d2').setAttribute('style','display: none');
+                  document.getElementById('d3').setAttribute('style','display: none');
+                  document.getElementById('d4').setAttribute('style','display: none');"> 
+                  Title </button></div>
+        <div class="dimmi"><button class="btn0" 
+          onclick="document.getElementById('d2').setAttribute('style','display: flex');
+          document.getElementById('d1').setAttribute('style','display: none');
+          document.getElementById('d3').setAttribute('style','display: none');
+          document.getElementById('d4').setAttribute('style','display: none');"> 
+          Text </button></div>
+        <div class="dimmi"><button style="margin-right: 20px;" class="btn2"
+          onclick="document.getElementById('d3').setAttribute('style','display: block');
+          document.getElementById('d2').setAttribute('style','display: none');
+          document.getElementById('d1').setAttribute('style','display: none');
+          document.getElementById('d4').setAttribute('style','display: none');
+          document.getElementById('pic  I').hidden = false; "
+          > 
+          Picture </button></div>
+        <div class="dimmi"><button class="btn1"
+          onclick="document.getElementById('d4').setAttribute('style','display: flex');
+          document.getElementById('d2').setAttribute('style','display: none');
+          document.getElementById('d3').setAttribute('style','display: none');
+          document.getElementById('d1').setAttribute('style','display: none');"> 
+           CSS code </button></div>
+      </div>
+      <div style="background: white; padding: 25px; align-items: center;">
+        <div id="d1" style="display: none">
+          <div style="font-size: 20px;margin-right: 20px;"> Input your title:</div>
+          <input type="text" [(ngModel)]="name">
+        </div>
+        <div  id="d2" style="display: none">
+          <div style="font-size: 20px;margin-right: 20px;"> Body:</div>
+          <textarea name="" id="" cols="50" rows="10" [(ngModel)]= 'body'></textarea>
+        </div>
+        <div  id="d3" style="display: none">
+          <div style="font-size: 20px;margin-right: 20px;"> Pictures:</div>
+          <div style="display: flex; padding: 10px;">
+           <button class="m" (click)="send()"> <img src="assets/img/flag.png" id="im1" class="im"></button>
+           <button class="m" (click)="send2()"> <img src="assets/img/c.png" class="im"  id="im2"></button>
+           <button class="m" (click)="send3()"> <img src="assets/img/play.png" id="im3"  class="im"></button>
+           <button class="m" (click)="send4()"><img src="assets/img/s.png" id="im4"  class="im"></button>
+          </div>
+        </div>
+        <div  id="d4" style="display: none">
+        
+        </div>
+      </div>
+
+    </div>
   </div>
   <div></div>
 </div>
