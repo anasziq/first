@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { TextAppComponent } from './text-app/text-app.component';
 import { PicAppComponent } from './pic-app/pic-app.component';
 import { TitleAppComponent } from './title-app/title-app.component';
+import { CssCodeComponent } from './css-code/css-code.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TextAppComponent,
     PicAppComponent,
-    TitleAppComponent 
+    TitleAppComponent,
+    CssCodeComponent 
   ],
   imports: [
     BrowserModule,

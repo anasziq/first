@@ -15,25 +15,27 @@ export class AppComponent {
   h: boolean =true;
   inputT:string;
   element: HTMLElement;
+  read:string= 'linear-gradient(' + 'to bottom' +',' + this.fcolor + ',' + this.fcolor2 + ')';
+  print(){
+  this.read = 'linear-gradient(' + 'to bottom' +',' + this.fcolor + ',' + this.fcolor2 + ')';
+  }
   send(){
    this.element=document.getElementById('im1') as HTMLElement;
-    this.uu = this.element.src;
-    this.h  = false;
+    this.uu = "assets/img/flag.png";
+   
   }
   send2(){
     this.element=document.getElementById('im2') as HTMLElement;
-     this.uu = this.element.src;
-     this.h  = false;
+     this.uu = "assets/img/c.png";
+     
    }
    send3(){
     this.element=document.getElementById('im3') as HTMLElement;
-     this.uu = this.element.src;
-     this.h  = false;
+     this.uu = "assets/img/play.png";
    }
    send4(){
     this.element=document.getElementById('im4') as HTMLElement;
-     this.uu = this.element.src;
-     this.h  = false;
+     this.uu = "assets/img/s.png";
    }
  
 }
