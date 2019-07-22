@@ -19,12 +19,25 @@ body{
 }
 
 .rec{
+    display: flex;
     width: 400px;
     height: 200px;
-    
+    border-radius: 10px;
+
+}
+.divrang{
+    margin-bottom: 20px;
+    display: flex;
+    padding: 5px;
+}
+.rang{
+    margin-left: 15px;
+   
 }
 .btn{
-    width: 60px;    height: 55px;
+    width: 60px;   
+    height: 60px;
+    border-radius: 50%;
     background: white;
     border: white;
 }

@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = "Make your own alarm";
+  title = "Make your own Alert";
   fcolor ='red';
   fcolor2 = 'blue';
   grad : any;
@@ -15,8 +15,22 @@ export class AppComponent {
   h: boolean =true;
   inputT:string;
   element: HTMLElement;
-  
- 
+  diriction ='to bottom';
+  w = 400;
+  wS=this.w+'px';
+  hi=200;
+  hS=this.hi+'px';
+  print(){
+    
+  }
+  editW(){
+    this.element=document.getElementById('back') as HTMLElement;
+    this.element.style.width = this.w + 'px';
+  }
+  editH(){
+    this.element=document.getElementById('back') as HTMLElement;
+    this.element.style.height = this.hi + 'px';
+  }
   send(){
    this.element=document.getElementById('im1') as HTMLElement;
     this.uu = "assets/img/flag.png";

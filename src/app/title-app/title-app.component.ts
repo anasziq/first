@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, wtfCreateScope } from '@angular/core';
 
 @Component({
   selector: 'app-title-app',
@@ -12,5 +12,6 @@ export class TitleAppComponent implements OnInit {
   ngOnInit() {
   }
   @Input() tit : String;
+  @Input() wt;
 
 }

@@ -11,7 +11,7 @@ export class CssCodeComponent implements OnInit {
  
   @Input() color1='red';
   @Input() color2= 'blue';
-  
+  @Input() diric ='to bottom';
   ngOnInit() {
     
   }
